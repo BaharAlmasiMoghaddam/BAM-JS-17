@@ -1,21 +1,43 @@
-<!DOCTYPE>
+<!DOCTYPE >
 <html lang="en_US">
+  <head>
+    <title>JS Week 2 - Exercises - todo-list</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <title>JS Week 2 - Exercises - todo-list</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="./style.css" />
-</head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand"><img src="./img/TD-1.webp" alt="Logo" /></div>
+      <div class="navbar-menu">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+      </div>
+    </nav>
 
-<body>
-  <div id="content">
-    <!-- 
-        DO NOT EDIT.
-        Your work should be put in here using JavaScript.
-      -->
-  </div>
+    <div class="jumbotron">
+      <div class="heading-underline">Todo List</div>
 
-  <script src="./script.js"></script>
-</body>
+      <div id="content">
+        <!-- 
+          DO NOT EDIT.
+          Your work should be put in here using JavaScript.
+        -->
+      </div>
+    </div>
 
+    <div class="add-task">
+      <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Add a new task..." />
+
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </form>
+    </div>
+
+    <div class="site-footer">
+      <p>All rights reserved dude!!!</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

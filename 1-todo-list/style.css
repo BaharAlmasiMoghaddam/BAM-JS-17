@@ -2,16 +2,29 @@ html,
 body {
   font-family: "Source Sans Pro", -apple-system, system-ui, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  height: 100vh; /*added*/
+  margin: 0; /*added*/
+  padding: 0; /*added*/
 }
 
 .site-footer {
   margin-top: 4em;
+  text-align: center; /*added*/
 }
 
 .site-footer p {
   border-top: 1px solid #dccdc6;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.navbar {
+  /*added*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
 }
 
 .navbar-brand > img {
@@ -28,6 +41,14 @@ body {
 /* Buttons */
 .btn {
   border-radius: 0.15em;
+  cursor: pointer; /*added*/
+  padding: 10px 20px; /*added*/
+  border: none; /*added*/
+}
+
+.btn:hover {
+  /*added*/
+  background-color: lightgray;
 }
 
 /* Alert */
@@ -37,7 +58,7 @@ body {
   margin-bottom: 3em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-  border: 1px solid #dccdc6;
+  /* border: 1px solid #dccdc6; */
   border-radius: 0;
   font-size: 0.85rem;
   line-height: 1.3em;
@@ -58,6 +79,10 @@ body {
 /* Jumbotron */
 .jumbotron {
   border-radius: 0;
+  padding: 2rem 1rem; /*added*/
+  margin-bottom: 2rem; /*added*/
+  background-color: rgb(248, 249, 250); /*added*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*added*/
 }
 
 /* Headings */
@@ -69,6 +94,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center; /*added*/
 }
 
 .heading-underline:before {
@@ -80,6 +106,27 @@ body {
   height: 1px;
   max-width: 100px;
   background: #ce5f31;
+}
+
+.add-task {
+  /*added*/
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+}
+.add-task form {
+  /*added*/
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#taskInput {
+  /*added*/
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Article */
