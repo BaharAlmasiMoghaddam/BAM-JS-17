@@ -6,6 +6,9 @@
 // todo-4: Each card should have a button; when clicked, the card title should be displayed on the element with the class "cardSelected".
 
 const wrapper = document.querySelector(".cards");
+
+const chosenSection = document.querySelector(".cardSelected");
+
 const data = [
   {
     id: 1,
@@ -42,3 +45,49 @@ const data = [
 ];
 
 // !Answer:
+data.forEach((item) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  //
+
+  const img = document.createElement("img");
+  img.src = item.src;
+  card.appendChild(img);
+
+  //
+
+  const title = document.createElement("h2");
+  title.textContent = item.title;
+  card.appendChild(title);
+
+  //
+
+  const accountContainer = document.createElement("div");
+  accountContainer.classList.add("accountContainer");
+
+  //
+
+  const accountImg = document.createElement("img");
+  accountImg.src = item.accountImage;
+  accountImg.classList.add("accountImage");
+  accountContainer.appendChild(accountImg);
+
+  //
+
+  const accountName = document.createElement("span");
+  accountName.textContent = item.account;
+  accountContainer.appendChild(accountName);
+  card.appendChild(accountContainer);
+
+  //
+
+  const button = document.createElement("button");
+  button.textContent = "Select";
+  button.addEventListener("click", () => {
+    selectedSection.textContent = item.title;
+  });
+
+  card.appendChild(button);
+  wrapper.appendChild(card);
+});
